@@ -72,7 +72,7 @@ class PackageSeed extends Command
 
     protected function getSeederClass($packageName)
     {
-        $seederClass = "Workdo\\{$packageName}\\Database\\Seeders\\{$packageName}DatabaseSeeder";
+        $seederClass = "Hubiko\\{$packageName}\\Database\\Seeders\\{$packageName}DatabaseSeeder";
         if (class_exists($seederClass)) {
             return $seederClass;
         }
@@ -84,7 +84,7 @@ class PackageSeed extends Command
     {
         $packages = [];
 
-        $vendorDir = base_path('packages/workdo');
+        $vendorDir = base_path('packages/hubiko');
         $directories = File::directories($vendorDir);
 
         foreach ($directories as $directory) {

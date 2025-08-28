@@ -27,7 +27,7 @@ class ModuleController extends Controller
                 $modules = Module::allModules();
                 $category_wise_add_ons = json_decode(file_get_contents("https://dash-demo.hubiko.com/cronjob/dash-addon.json"), true);
 
-                $path = base_path('packages/workdo');
+                $path = base_path('packages/hubiko');
                 $devPackagePath = \Illuminate\Support\Facades\File::directories($path);
 
                 $devPackageDirectories = array_map(function ($dir) {
@@ -52,7 +52,7 @@ class ModuleController extends Controller
                     $devModules[$index]['alias'] = $devPackageArr->alias;
                     $devModules[$index]['monthly_price'] = $devPackageArr->monthly_price ?? 0;
                     $devModules[$index]['yearly_price'] = $devPackageArr->yearly_price ?? 0;
-                    $devModules[$index]['image'] = url('/packages/workdo/' . $devPackage . '/favicon.png');
+                    $devModules[$index]['image'] = url('/packages/hubiko/' . $devPackage . '/favicon.png');
                     $devModules[$index]['description'] = $devPackageArr->description ?? "";
                     $devModules[$index]['priority'] = $devPackageArr->priority ?? 10;
                     $devModules[$index]['child_module'] = $devPackageArr->child_module ?? [];
@@ -102,10 +102,10 @@ class ModuleController extends Controller
             } else {
                 $addon = AddOn::where('module', $request->name)->first();
                 if (empty($addon)) {
-                    Artisan::call('migrate --path=/packages/workdo/' . $request->name . '/src/Database/Migrations');
+                    Artisan::call('migrate --path=/packages/hubiko/' . $request->name . '/src/Database/Migrations');
                     Artisan::call('package:seed ' . $request->name);
 
-                    $filePath = base_path('packages/workdo/' . $request->name . '/module.json');
+                    $filePath = base_path('packages/hubiko/' . $request->name . '/module.json');
                     $jsonContent = file_get_contents($filePath);
                     $data = json_decode($jsonContent, true);
 
@@ -123,7 +123,7 @@ class ModuleController extends Controller
 
                 $check_parent_module = $this->Check_Parent_Module($module);
                 if ($check_parent_module['status'] == true) {
-                    Artisan::call('migrate --path=/packages/workdo/' . $request->name . '/src/Database/Migrations');
+                    Artisan::call('migrate --path=/packages/hubiko/' . $request->name . '/src/Database/Migrations');
                     Artisan::call('package:seed ' . $request->name);
                     $module = Module::find($request->name);
                     $module->enable();
@@ -154,12 +154,12 @@ class ModuleController extends Controller
         }
 
         // Prepare the extraction path
-        $extractPath = 'packages/workdo/' . $fileName;
+        $extractPath = 'packages/hubiko/' . $fileName;
         $this->createDirectory($extractPath);
 
 
          // After extracting to the temporary directory
-         $tempPath = 'packages/workdo/tmp_' . uniqid();
+         $tempPath = 'packages/hubiko/tmp_' . uniqid();
          $zip->extractTo($tempPath);
          $zip->close();
 
@@ -183,7 +183,7 @@ class ModuleController extends Controller
         $this->setPermissions($extractPath);
 
         // Process the `module.json` file
-        $filePath = base_path('packages/workdo/' . $fileName . '/module.json');
+        $filePath = base_path('packages/hubiko/' . $fileName . '/module.json');
         $data = $this->parseJsonFile($filePath);
 
         // Handle AddOn logic

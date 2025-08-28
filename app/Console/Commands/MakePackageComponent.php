@@ -36,8 +36,8 @@ class MakePackageComponent extends Command
 
         $this->packageName = $this->camelToKebab($package);
 
-        $baseDir = base_path("packages/workdo/$package/src");
-        $namespace = "Workdo\\$package\\";
+        $baseDir = base_path("packages/hubiko/$package/src");
+        $namespace = "Hubiko\\$package\\";
 
         switch ($type) {
             case 'controller':
@@ -174,7 +174,7 @@ class MakePackageComponent extends Command
 
     protected function createMigration($name, $package)
     {
-        $command = 'make:migration ' . $name . ' --path=/packages/workdo/' . $package . '/src/Database/Migrations';
+        $command = 'make:migration ' . $name . ' --path=/packages/hubiko/' . $package . '/src/Database/Migrations';
         Artisan::call($command);
         $this->info("Migration created successfully.");
     }

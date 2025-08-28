@@ -86,7 +86,7 @@ class HomeController extends Controller
                 });
                 foreach ($modules as $key => $module) {
                     // Get the module directorie in your project
-                    $directory = "packages/workdo/".$module->name."/src/Database/Migrations";
+                    $directory = "packages/hubiko/".$module->name."/src/Database/Migrations";
 
                     $files = collect(File::glob("{$directory}/*.php"))
                         ->map(function ($path) {

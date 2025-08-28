@@ -45,7 +45,7 @@ class CreatePackage extends Command
         $this->UpperName = $name;
         $this->packageName = $this->camelToKebab($name);
 
-        $packagePath = base_path("packages/workdo/{$name}");
+        $packagePath = base_path("packages/hubiko/{$name}");
 
         if (File::exists($packagePath)) {
             $this->error("Package {$name} already exists!");
@@ -107,7 +107,7 @@ class CreatePackage extends Command
     {
         $name = "workdo/{$this->packageName}";
         $description = "Description for {$this->packageName} package";
-        $namespace = "Workdo\\\\{$this->UpperName}\\\\Providers\\\\{$this->UpperName}ServiceProvider";
+        $namespace = "Hubiko\\\\{$this->UpperName}\\\\Providers\\\\{$this->UpperName}ServiceProvider";
 
         return <<<EOT
         {
@@ -118,7 +118,7 @@ class CreatePackage extends Command
             "require": {},
             "autoload": {
                 "psr-4": {
-                    "Workdo\\\\{$this->UpperName}\\\\": "src/"
+                    "Hubiko\\\\{$this->UpperName}\\\\": "src/"
                 }
             },
             "authors": [
@@ -200,7 +200,7 @@ class CreatePackage extends Command
             $stub = str_replace('$LOWER_NAME$', $this->LowerName, $stub);
             $stub = str_replace('$PACKAGE_NAME$', $this->packageName, $stub);
 
-            $filePath = base_path("packages/workdo/{$this->UpperName}/".$phpFile);
+            $filePath = base_path("packages/hubiko/{$this->UpperName}/".$phpFile);
 
             if (!File::exists(dirname($filePath))) {
                 File::makeDirectory(dirname($filePath), 0755, true);
@@ -214,11 +214,11 @@ class CreatePackage extends Command
         return <<<EOT
         <?php
 
-        namespace Workdo\\{$this->UpperName}\\Providers;
+        namespace Hubiko\\{$this->UpperName}\\Providers;
 
         use Illuminate\Support\ServiceProvider;
-        use Workdo\\{$this->UpperName}\\Providers\EventServiceProvider;
-        use Workdo\\{$this->UpperName}\\Providers\RouteServiceProvider;
+        use Hubiko\\{$this->UpperName}\\Providers\EventServiceProvider;
+        use Hubiko\\{$this->UpperName}\\Providers\RouteServiceProvider;
 
         class {$this->UpperName}ServiceProvider extends ServiceProvider
         {
@@ -266,7 +266,7 @@ class CreatePackage extends Command
         return <<<EOT
         <?php
 
-        namespace Workdo\\{$this->UpperName}\\Database\Seeders;
+        namespace Hubiko\\{$this->UpperName}\\Database\Seeders;
 
         use Illuminate\Database\Seeder;
         use Illuminate\Database\Eloquent\Model;

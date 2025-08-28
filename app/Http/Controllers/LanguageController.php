@@ -438,7 +438,7 @@ class LanguageController extends Controller
 
         $modules = Module::all();
         foreach ($modules as $module) {
-            $moduleLangDirectories = base_path('packages/workdo/' . $module->name . '/src/Resources/lang');
+            $moduleLangDirectories = base_path('packages/hubiko/' . $module->name . '/src/Resources/lang');
             $moduleJsonFiles = glob($moduleLangDirectories . DIRECTORY_SEPARATOR . "*.json");
             foreach ($moduleJsonFiles as $moduleFilePath) {
                 $moduleFileName = basename($moduleFilePath);
@@ -509,7 +509,7 @@ class LanguageController extends Controller
                 $this->mergeJsonFiles($existingFilePath, $uploadedFilePath);
             } else {
                 [$module, $language] = explode('-', $uploadedFileName, 2);
-                $existingFilePath = base_path("packages/workdo/{$module}/src/Resources/lang/{$language}");
+                $existingFilePath = base_path("packages/hubiko/{$module}/src/Resources/lang/{$language}");
 
                 $this->mergeJsonFiles($existingFilePath, $uploadedFilePath);
             }

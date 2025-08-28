@@ -25,7 +25,7 @@ class Module
 
     public function json($name)
     {
-        $path = base_path('packages/workdo/' . $name . '/module.json');
+        $path = base_path('packages/hubiko/' . $name . '/module.json');
         if (!File::exists($path)) {
             return false;
         }
@@ -52,7 +52,7 @@ class Module
                         $this->alias = $addonJson['alias'] ?? $name;
                         $this->monthly_price = $addonJson['monthly_price'] ?? 0;
                         $this->yearly_price = $addonJson['yearly_price'] ?? 0;
-                        $this->image = url('/packages/workdo/' . $addonJson['name'] . '/favicon.png');
+                        $this->image = url('/packages/hubiko/' . $addonJson['name'] . '/favicon.png');
                         $this->description = $addonJson['description'] ?? "";
                         $this->priority = $addonJson['priority'] ?? 10;
                         $this->child_module = $addonJson['child_module'] ?? [];
@@ -67,7 +67,7 @@ class Module
                         $this->alias = $this->addon->name ?? $name;
                         $this->monthly_price = $this->addon->monthly_price ?? 0;
                         $this->yearly_price = $this->addon->yearly_price ?? 0;
-                        $this->image = !empty($this->addon->image) ? get_file($this->addon->image) : url('/packages/workdo/' . $this->addon->module . '/favicon.png');
+                        $this->image = !empty($this->addon->image) ? get_file($this->addon->image) : url('/packages/hubiko/' . $this->addon->module . '/favicon.png');
                         $this->package_name = $this->addon->package_name ?? null;
                     }
                 }
@@ -157,7 +157,7 @@ class Module
 
     public function getDirectories()
     {
-        $path = base_path('packages/workdo');
+        $path = base_path('packages/hubiko');
         return File::directories($path);
     }
 
@@ -166,16 +166,16 @@ class Module
         if (is_null($this->addon)) {
             return $this->getDirectories();
         }
-        return base_path('packages/workdo/' . $this->name);
+        return base_path('packages/hubiko/' . $this->name);
     }
 
     public function getDevPackagePath()
     {
         if (is_null($this->addon)) {
-            $path = base_path('packages/workdo');
+            $path = base_path('packages/hubiko');
             return File::directories($path);
         }
-        return base_path('packages/workdo/' . $this->name);
+        return base_path('packages/hubiko/' . $this->name);
     }
 
     public function allModules()
