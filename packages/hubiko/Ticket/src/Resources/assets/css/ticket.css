@@ -1,0 +1,182 @@
+/**
+ * Ticket Module - CSS Styles
+ */
+
+/* Ticket Status Colors */
+.ticket-status-new {
+    background-color: #3498db;
+    color: white;
+}
+
+.ticket-status-in-progress {
+    background-color: #f39c12;
+    color: white;
+}
+
+.ticket-status-on-hold {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.ticket-status-closed {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.ticket-status-resolved {
+    background-color: #2ecc71;
+    color: white;
+}
+
+/* Ticket Priority Colors */
+.ticket-priority-low {
+    border-left: 4px solid #3498db;
+}
+
+.ticket-priority-medium {
+    border-left: 4px solid #f39c12;
+}
+
+.ticket-priority-high {
+    border-left: 4px solid #e74c3c;
+}
+
+.ticket-priority-critical {
+    border-left: 4px solid #9b59b6;
+}
+
+/* Ticket Card */
+.ticket-card {
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.ticket-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.ticket-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+/* Ticket Conversation */
+.ticket-conversation {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.conversation-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.conversation-item.customer {
+    background-color: #f8f9fa;
+    margin-right: 20%;
+}
+
+.conversation-item.agent {
+    background-color: #e3f2fd;
+    margin-left: 20%;
+}
+
+.conversation-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+.conversation-content {
+    margin-bottom: 10px;
+}
+
+.conversation-attachments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.attachment-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.attachment-item i {
+    margin-right: 5px;
+}
+
+/* Reply Form */
+.reply-form {
+    margin-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+}
+
+.ticket-attachments-wrapper {
+    margin-top: 10px;
+}
+
+.ticket-attachment-preview {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.ticket-attachment-preview img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.ticket-attachment-preview .remove-attachment {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .conversation-item.customer,
+    .conversation-item.agent {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .ticket-card .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .ticket-card .card-header .ticket-status {
+        margin-top: 10px;
+    }
+} 

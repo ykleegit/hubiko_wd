@@ -71,21 +71,21 @@
                     </div>
                     <div class="col-xxl-4 col-md-6 col-12">
                         <div class="add-on-banner-content text-center ">
-                            <a href="https://workdo.io/product-category/dash-saas-add-ons/?utm_source=demo&utm_medium=dash&utm_campaign=btn" target="new" class="btn btn-light mb-md-3 mb-2">
-                                <img src="https://workdo.io/wp-content/uploads/2023/03/favicon.jpg" alt="">
+                            <a href="https://hubiko.com/product-category/dash-saas-add-ons/?utm_source=demo&utm_medium=dash&utm_campaign=btn" target="new" class="btn btn-light mb-md-3 mb-2">
+                                <img src="https://hubiko.com/wp-content/uploads/2023/03/favicon.jpg" alt="">
                                 <span>{{ __('Click Here') }}</span>
                             </a>
-                            <h2>{{ __('Buy More Add-on') }}</h2>
+                            <h2>{{ __('Self-Built Add-ons') }}</h2>
                             <p>+{{ $totalAddOns }}<span>{{ __('Premium Add-on') }}</span></p>
                         </div>
                     </div>
                     <div class="col-xxl-4 col-12">
                         <div class="add-on-btn d-flex flex-wrap align-items-center justify-content-xxl-end justify-content-center gap-2">
-                            <a class="btn btn-warning" href="https://workdo.io/product-category/dash-saas-add-ons/dash-saas-bundle/?utm_source=demo&utm_medium=dash-bundle&utm_campaign=btn" target="new">
-                                {{ __('Buy Add-on Bundles') }}
+                            <a class="btn btn-warning" href="https://hubiko.com/product-category/dash-saas-add-ons/dash-saas-bundle/?utm_source=demo&utm_medium=dash-bundle&utm_campaign=btn" target="new">
+                                {{ __('Manage Add-ons') }}
                               </a>
-                              <a class="btn btn-primary" href="https://workdo.io/product-category/dash-saas-add-ons/?utm_source=demo&utm_medium=dash&utm_campaign=btn" target="new">
-                                {{ __('Buy More Add-on') }}
+                              <a class="btn btn-primary" href="https://hubiko.com/product-category/dash-saas-add-ons/?utm_source=demo&utm_medium=dash&utm_campaign=btn" target="new">
+                                {{ __('Self-Built Add-ons') }}
                               </a>
                         </div>
                     </div>
@@ -202,7 +202,7 @@
                 @endif
             @endforeach
 
-            <h2>{{ __('Explore Add-on') }}</h2>
+            <h2>{{ __('Available Add-ons') }}</h2>
 
             <div class="col-xl-12">
                 @foreach ($category_wise_add_ons as $key => $category_wise_add_on)

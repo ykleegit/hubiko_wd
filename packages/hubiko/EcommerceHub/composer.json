@@ -1,0 +1,30 @@
+{
+    "name": "hubiko/ecommercehub",
+    "description": "Self-built EcommerceHub package for Hubiko",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubiko\\EcommerceHub\\Providers\\EcommerceHubServiceProvider"
+            ],
+            "aliases": {
+                "EcommerceHub": "Workdo\\EcommerceHub\\Facades\\EcommerceHub"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Hubiko\\EcommerceHub\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0|^10.0"
+    }
+}

@@ -156,7 +156,7 @@
                 <div class="footer-col  about-site">
                     <p>{{ __('We build modern web tools to help you jump-start your daily business work.')}}</p>
                     <p>{{ __('All Rights Reserved to')}}<br>
-                        <a href="https://workdo.io/">{{ 'WorkDo.io'}}</a>
+                        <a href="https://hubiko.com/">{{ 'WorkDo.io'}}</a>
                     </p>
                 </div>
                 <div class="footer-col footer-link footer-link-1">

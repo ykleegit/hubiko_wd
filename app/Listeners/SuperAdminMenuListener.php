@@ -216,7 +216,7 @@ class SuperAdminMenuListener
         ]);
         $company_settings = getCompanyAllSetting();
         if(!empty($company_settings['category_wise_sidemenu']) && $company_settings['category_wise_sidemenu'] == 'on'){
-            $category_wise_add_ons = json_decode(file_get_contents("https://dash-demo.workdo.io/cronjob/dash-addon.json"),true);
+            $category_wise_add_ons = json_decode(file_get_contents("https://dash-demo.hubiko.com/cronjob/dash-addon.json"),true);
             $categories  =  array_map(function($item) {
                 return [
                     "name" => $item["name"],

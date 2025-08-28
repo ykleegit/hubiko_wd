@@ -9,7 +9,7 @@
                 <div>
                     <div class="card mt-5" id="printTable">
                         <div class="col-xs-12 text-end">
-                            <img  src="{{ !empty (get_file(sidebar_logo())) ? get_file(sidebar_logo()) :'WorkDo'}}" class="m-3" style="max-width: 150px;"/>
+                            <img  src="{{ !empty (get_file(sidebar_logo())) ? get_file(sidebar_logo()) :'Hubiko'}}" class="m-3" style="max-width: 150px;"/>
                         </div>
                         <div class="card-body" id="exportContent">
                             <div class="row invoice-title mt-2">

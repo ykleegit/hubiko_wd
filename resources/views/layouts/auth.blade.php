@@ -22,7 +22,7 @@
 
 <head>
 
-    <title>@yield('page-title') | {{ !empty($admin_settings['title_text']) ? $admin_settings['title_text'] : config('app.name', 'WorkDo') }}</title>
+    <title>@yield('page-title') | {{ !empty($admin_settings['title_text']) ? $admin_settings['title_text'] : config('app.name', 'Hubiko') }}</title>
 
     <meta name="title" content="{{ !empty($admin_settings['meta_title']) ? $admin_settings['meta_title'] : 'WOrkdo Dash' }}">
     <meta name="keywords" content="{{ !empty($admin_settings['meta_keywords']) ? $admin_settings['meta_keywords'] : 'WorkDo Dash,SaaS solution,Multi-workspace' }}">
@@ -104,7 +104,7 @@
                     <div class="container">
                         <div class="navbar-brand">
                             <a class="navbar-brand" href="{{ url('/') }}">
-                                <img src="{{ get_file(sidebar_logo()) }}{{'?'.time()}}" alt="{{ config('app.name', 'WorkDo') }}" class="navbar-brand-img auth-navbar-brand">
+                                <img src="{{ get_file(sidebar_logo()) }}{{'?'.time()}}" alt="{{ config('app.name', 'Hubiko') }}" class="navbar-brand-img auth-navbar-brand">
                             </a>
                         </div>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -134,7 +134,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <span>
-                                    @if (!empty($admin_settings['footer_text'])) {{$admin_settings['footer_text']}} @else{{__('Copyright')}} &copy; {{ config('app.name', 'WorkDo') }}@endif{{date('Y')}}
+                                    @if (!empty($admin_settings['footer_text'])) {{$admin_settings['footer_text']}} @else{{__('Copyright')}} &copy; {{ config('app.name', 'Hubiko') }}@endif{{date('Y')}}
                                 </span>
                             </div>
                         </div>

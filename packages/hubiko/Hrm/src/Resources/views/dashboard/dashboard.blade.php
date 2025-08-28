@@ -20,7 +20,7 @@
                 <img src="{{ asset('assets/images/layer.png') }}" class="dashboard-card-layer" alt="layer">
                 <div class="card-inner">
                     <div class="card-content">
-                        <h2>{{ !empty($ActiveWorkspaceName) ? $ActiveWorkspaceName->name : 'WorkDo' }}</h2>
+                        <h2>{{ !empty($ActiveWorkspaceName) ? $ActiveWorkspaceName->name : 'Hubiko' }}</h2>
                         <p>{{ __('Streamline HR with seamless tasks, smooth recruitment, and efficient payroll') }} </p>
                         <div class="btn-wrp d-flex gap-3">
                             {{-- <a href="javascript:" class="btn btn-primary" tabindex="0">

@@ -1,0 +1,33 @@
+{
+    "name": "hubiko/ticket",
+    "description": "Self-built Ticket package for Hubiko",
+    "type": "hubiko-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ],
+    "require": [],
+    "autoload": {
+        "psr-4": {
+            "Hubiko\\Ticket\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubiko\\Ticket\\Providers\\TicketServiceProvider"
+            ],
+            "aliases": {
+                "Ticket": "Workdo\\Ticket\\Facades\\Ticket"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -18,7 +18,7 @@
                                 <div class="col-12">
                                     <div class="invoice-title d-flex  justify-content-between">
                                         <div class="">
-                                            <img src="{{ get_file(sidebar_logo()) }}" alt="{{ config('app.name', 'WorkDo') }}"
+                                            <img src="{{ get_file(sidebar_logo()) }}" alt="{{ config('app.name', 'Hubiko') }}"
                                                 class="logo logo-lg"style="max-width: 150px; object-fit: cover;">
                                         </div>
                                         <div class="text-md-right" style="text-align: end; font-size:20px;">

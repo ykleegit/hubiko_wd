@@ -33,7 +33,7 @@
 <head>
 
     <title>@yield('page-title') |
-        {{ !empty($company_settings['title_text']) ? $company_settings['title_text'] : config('app.name', 'WorkDo') }}
+        {{ !empty($company_settings['title_text']) ? $company_settings['title_text'] : config('app.name', 'Hubiko') }}
     </title>
 
     <meta name="title"
@@ -149,7 +149,7 @@
                                     }
                                 @endphp
                                 <img src="{{ $logo }}{{ '?' . time() }}"
-                                    alt="{{ config('app.name', 'WorkDo') }}"
+                                    alt="{{ config('app.name', 'Hubiko') }}"
                                     class="navbar-brand-img auth-navbar-brand">
                             </a>
                         </div>
@@ -182,7 +182,7 @@
                                 <span>
                                     @if (!empty($company_settings['footer_text']))
                                         {{ $company_settings['footer_text'] }} @else{{ __('Copyright') }} &copy;
-                                        {{ config('app.name', 'WorkDo') }}
+                                        {{ config('app.name', 'Hubiko') }}
                                     @endif{{ date('Y') }}
                                 </span>
                             </div>

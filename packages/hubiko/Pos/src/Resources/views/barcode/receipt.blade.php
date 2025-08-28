@@ -25,7 +25,7 @@
     <!-- vendor css -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" id="main-style-link">
 
-    <title>{{__('POS Barcode')}} | {{ !empty($company_settings['title_text']) ? $company_settings['title_text'] : (!empty($admin_settings['title_text']) ? $admin_settings['title_text'] :'WorkDo') }}</title>
+    <title>{{__('POS Barcode')}} | {{ !empty($company_settings['title_text']) ? $company_settings['title_text'] : (!empty($admin_settings['title_text']) ? $admin_settings['title_text'] :'Hubiko') }}</title>
     @if (isset($company_settings['site_rtl'] ) && $company_settings['site_rtl'] == 'on')
         <link rel="stylesheet" href="{{ asset('assets/css/style-rtl.css')}}" id="main-style-link">
     @endif

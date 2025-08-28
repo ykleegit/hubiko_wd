@@ -1,0 +1,19 @@
+{
+    "name": "Booking",
+    "alias": "Booking System",
+    "description": "Complete booking management system with room reservations, guest management, and booking calendar",
+    "priority": 60,
+    "version": 1,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "booking",
+    "self_built": true,
+    "provider": "hubiko",
+    "features": [
+        "Online Booking System",
+        "Calendar Integration",
+        "Payment Processing",
+        "Booking Management",
+        "Customer Notifications"
+    ]
+}

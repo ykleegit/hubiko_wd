@@ -1,0 +1,24 @@
+{
+    "name": "EcommerceHub",
+    "alias": "ecommerce",
+    "description": "Complete e-commerce solution with ecosystem integration",
+    "version": "1.0.0",
+    "monthly_price": 49,
+    "yearly_price": 490,
+    "display": true,
+    "package_name": "ecommerce-hub",
+    "dependencies": [
+        "ProductService",
+        "Account",
+        "Lead"
+    ],
+    "self_built": true,
+    "provider": "hubiko",
+    "features": [
+        "Multi-Store Management",
+        "Product Catalog",
+        "Order Processing",
+        "Inventory Management",
+        "Payment Gateway Integration"
+    ]
+}

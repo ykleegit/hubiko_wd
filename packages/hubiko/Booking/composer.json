@@ -1,0 +1,22 @@
+{
+    "name": "hubiko/booking",
+    "description": "Self-built Booking package for Hubiko",
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Hubiko\\Booking\\": "src/"
+        }
+    },
+    "require": []
+}

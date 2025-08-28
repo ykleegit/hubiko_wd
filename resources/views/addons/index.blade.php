@@ -34,6 +34,7 @@
                 <div id="addons-overview" class="card">
                     <div class="card-header">
                         <h5>{{ __('Self-Built Add-on System') }}</h5>
+                        <p class="text-muted mb-0">{{ __('Manage your self-built add-ons without external dependencies') }}</p>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -47,7 +48,7 @@
                                                         <i class="ti ti-package text-primary"></i>
                                                     </div>
                                                     <div class="ms-3">
-                                                        <small class="text-white">{{ __('Total Add-ons') }}</small>
+                                                        <small class="text-white">{{ __('Total Modules') }}</small>
                                                         <h6 class="m-0 text-white">{{ count($addons) }}</h6>
                                                     </div>
                                                 </div>
@@ -85,7 +86,7 @@
                                                         <i class="ti ti-power text-info"></i>
                                                     </div>
                                                     <div class="ms-3">
-                                                        <small class="text-white">{{ __('Enabled') }}</small>
+                                                        <small class="text-white">{{ __('Active') }}</small>
                                                         <h6 class="m-0 text-white">{{ collect($addons)->where('enabled', true)->count() }}</h6>
                                                     </div>
                                                 </div>
@@ -94,6 +95,11 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        
+                        <div class="alert alert-info mt-3">
+                            <i class="ti ti-info-circle me-2"></i>
+                            {{ __('All add-ons are self-built and managed locally. No external dependencies or marketplace connections required.') }}
                         </div>
                     </div>
                 </div>

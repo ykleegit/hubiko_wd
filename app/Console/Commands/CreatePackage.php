@@ -123,8 +123,8 @@ class CreatePackage extends Command
             },
             "authors": [
                 {
-                    "name": "WorkDo",
-                    "email": "support@workdo.io"
+                    "name": "Hubiko",
+                    "email": "support@hubiko.com"
                 }
             ],
             "extra": {

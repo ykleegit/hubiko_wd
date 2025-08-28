@@ -1,0 +1,12 @@
+{
+    "self_built": true,
+    "provider": "hubiko",
+    "description": "Self-built AIContent module with enhanced features and local management",
+    "features": [
+        "AI-Powered Content Generation",
+        "Multiple Content Types Support",
+        "Template Management",
+        "Content Optimization",
+        "SEO-Friendly Output"
+    ]
+}

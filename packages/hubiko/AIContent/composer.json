@@ -1,0 +1,10 @@
+{
+    "name": "hubiko/aicontent",
+    "description": "Self-built AIContent package for Hubiko",
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ]
+}

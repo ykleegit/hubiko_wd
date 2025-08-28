@@ -7,7 +7,7 @@
                 @elseif(isset($admin_settings['footer_text']))
                     {{ $admin_settings['footer_text'] }}
                 @else
-                    {{ __('Copyright') }} &copy; {{ config('app.name', 'WorkDo') }}
+                    {{ __('Copyright') }} &copy; {{ config('app.name', 'Hubiko') }}
                 @endif
                 {{ date('Y') }}
             </span>

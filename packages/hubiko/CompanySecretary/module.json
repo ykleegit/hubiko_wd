@@ -1,0 +1,19 @@
+{
+    "name": "CompanySecretary",
+    "alias": "Company Secretary",
+    "description": "Corporate governance and compliance management system with board meetings, resolutions, and regulatory filings",
+    "priority": 70,
+    "version": 1,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "company-secretary",
+    "self_built": true,
+    "provider": "hubiko",
+    "features": [
+        "Company Registration Management",
+        "Legal Document Templates",
+        "Compliance Tracking",
+        "Filing Management",
+        "Corporate Governance"
+    ]
+}

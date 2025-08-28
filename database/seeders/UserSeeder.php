@@ -29,7 +29,7 @@ class UserSeeder extends Seeder
         if(empty($user))
         {
             $company = new User();
-            $company->name = 'WorkDo';
+            $company->name = 'Hubiko';
             $company->email = 'company@example.com';
             $company->password = Hash::make('1234');
             $company->email_verified_at = date('Y-m-d H:i:s');
@@ -52,7 +52,7 @@ class UserSeeder extends Seeder
 
             // create  WorkSpace
             $workspace = new WorkSpace();
-            $workspace->name = 'WorkDo';
+            $workspace->name = 'Hubiko';
             $workspace->slug = 'workdo';
             $workspace->created_by = $company->id;
             $workspace->save();

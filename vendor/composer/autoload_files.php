@@ -60,5 +60,6 @@ return array(
     'ec07570ca5a812141189b1fa81503674' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
     'd7354eb4c8441fbf08eec280b61c7c73' => $vendorDir . '/rachidlaasri/laravel-installer/src/Helpers/functions.php',
     '33341055dccbf8162b284be2919dca7f' => $vendorDir . '/tzsk/sms/src/Helper.php',
+    '4cd67f4db52db5a79973bd1b85ad34b6' => $baseDir . '/packages/hubiko/Ticket/src/helpers.php',
     '577e8babc5e897de9cab73c9a71fdb59' => $baseDir . '/app/Helper/helper.php',
 );

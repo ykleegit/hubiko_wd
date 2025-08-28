@@ -1,0 +1,30 @@
+{
+    "name": "Ticket",
+    "alias": "Ticket Management",
+    "description": "Comprehensive ticket management system for customer support and internal communication",
+    "priority": 15,
+    "version": 1,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "ticket",
+    "parent_module": [],
+    "child_module": [],
+    "display": true,
+    "keywords": [
+        "ticket",
+        "support",
+        "helpdesk",
+        "customer service"
+    ],
+    "category": "Support",
+    "author": "Workdo Team",
+    "self_built": true,
+    "provider": "hubiko",
+    "features": [
+        "Support Ticket System",
+        "Customer Portal",
+        "Ticket Routing",
+        "SLA Management",
+        "Knowledge Base Integration"
+    ]
+}

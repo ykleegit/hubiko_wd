@@ -781,7 +781,7 @@ $company_settings['proposal_shipping_display'] = isset($company_settings['propos
                                        <div class="row invoice-title mt-2">
                                           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-12">
                                              <img src="{{ get_file(sidebar_logo()) }}"
-                                                alt="{{ config('app.name', 'WorkDo') }}"
+                                                alt="{{ config('app.name', 'Hubiko') }}"
                                                 class="logo logo-lg" style="max-width: 250px">
                                           </div>
                                           <div

@@ -25,7 +25,7 @@ class ModuleController extends Controller
         if (Auth::user()->isAbleTo('module manage')) {
             try {
                 $modules = Module::allModules();
-                $category_wise_add_ons = json_decode(file_get_contents("https://dash-demo.workdo.io/cronjob/dash-addon.json"), true);
+                $category_wise_add_ons = json_decode(file_get_contents("https://dash-demo.hubiko.com/cronjob/dash-addon.json"), true);
 
                 $path = base_path('packages/workdo');
                 $devPackagePath = \Illuminate\Support\Facades\File::directories($path);

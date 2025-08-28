@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ \Hubiko\Account\Entities\Bill::billNumberFormat($bill->bill_id,$bill->created_by,$bill->workspace)}} | {{ !empty(company_setting('title_text',$bill->created_by,$bill->workspace)) ? company_setting('title_text',$bill->created_by,$bill->workspace) : (!empty(admin_setting('title_text')) ? admin_setting('title_text') :'WorkDo') }}</title>
+    <title>{{ \Hubiko\Account\Entities\Bill::billNumberFormat($bill->bill_id,$bill->created_by,$bill->workspace)}} | {{ !empty(company_setting('title_text',$bill->created_by,$bill->workspace)) ? company_setting('title_text',$bill->created_by,$bill->workspace) : (!empty(admin_setting('title_text')) ? admin_setting('title_text') :'Hubiko') }}</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">

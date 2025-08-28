@@ -1,0 +1,41 @@
+{
+    "name": "SEOHub",
+    "alias": "seohub",
+    "description": "Professional SEO auditing and website analysis module for comprehensive website optimization",
+    "keywords": [
+        "seo",
+        "audit",
+        "website",
+        "analysis",
+        "optimization",
+        "monitoring"
+    ],
+    "version": "1.0.0",
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Workdo\\SEOHub\\Providers\\SEOHubServiceProvider"
+    ],
+    "aliases": [],
+    "files": [],
+    "requires": [],
+    "premium": true,
+    "monthly_price": 24.99,
+    "yearly_price": 249.99,
+    "package_name": "seohub",
+    "display": true,
+    "category": "marketing",
+    "compatibility": {
+        "hubiko_version": ">=2.0.0",
+        "php_version": ">=8.1"
+    },
+    "self_built": true,
+    "provider": "hubiko",
+    "features": [
+        "SEO Analysis Tools",
+        "Keyword Research",
+        "Meta Tag Management",
+        "Site Optimization",
+        "Performance Tracking"
+    ]
+}

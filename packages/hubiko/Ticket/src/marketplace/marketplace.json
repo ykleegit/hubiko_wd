@@ -1,0 +1,27 @@
+{
+    "title": "Ticket System",
+    "description": "Manage customer support tickets in your organization",
+    "logo_path": "ticket-logo.png",
+    "screenshots": [
+        "screenshot-1.png",
+        "screenshot-2.png",
+        "screenshot-3.png"
+    ],
+    "version": "1.0.0",
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "supported_languages": ["en"],
+    "features": [
+        "Create and manage support tickets",
+        "Track customer inquiries",
+        "Assign tickets to agents",
+        "Categorize tickets by type",
+        "Set priorities for tickets",
+        "Reply to tickets with attachments",
+        "Email notifications for ticket updates"
+    ],
+    "installation_steps": "Follow the documentation for installation instructions.",
+    "documentation_link": "https://documentation.hubiko.com/ticket",
+    "support_email": "support@hubiko.com",
+    "supported_hubiko_version": ">=1.0"
+} 

@@ -1,0 +1,22 @@
+{
+    "name": "WhatStore",
+    "alias": "WhatsApp Store",
+    "description": "A comprehensive WhatsApp Store management solution for creating and managing online stores through WhatsApp",
+    "priority": 10,
+    "version": 1,
+    "monthly_price": 19.99,
+    "yearly_price": 199.99,
+    "package_name": "what-store",
+    "parent_module": [],
+    "child_module": [],
+    "display": true,
+    "self_built": true,
+    "provider": "hubiko",
+    "features": [
+        "WhatsApp Store Integration",
+        "Product Catalog Sharing",
+        "Order Management via WhatsApp",
+        "Customer Communication",
+        "Automated Responses"
+    ]
+}
