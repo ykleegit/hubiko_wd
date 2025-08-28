@@ -1,0 +1,26 @@
+{
+    "name": "hubiko/productservice",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hubiko\\ProductService\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": [],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubiko\\ProductService\\Providers\\ProductServiceServiceProvider"
+            ]
+        }
+    },
+    "description": "Self-built ProductService package for Hubiko"
+}

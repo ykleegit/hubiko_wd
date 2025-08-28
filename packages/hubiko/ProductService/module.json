@@ -1,0 +1,16 @@
+{
+    "name": "ProductService",
+    "alias": "Product Service",
+    "description": "Self-built ProductService module with enhanced features and local management",
+    "priority": 0,
+    "version": 3.4,
+    "child_module": [
+        "HubSpot"
+    ],
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "product-service",
+    "display": false,
+    "self_built": true,
+    "provider": "hubiko"
+}

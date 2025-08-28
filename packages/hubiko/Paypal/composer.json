@@ -1,0 +1,53 @@
+{
+    "name": "hubiko/paypal",
+    "description": "Self-built Paypal package for Hubiko",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "srmklive/paypal": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hubiko\\Paypal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubiko\\Paypal\\Providers\\PaypalServiceProvider",
+                "Hubiko\\Paypal\\Providers\\ViewComposer",
+                "Hubiko\\Paypal\\Providers\\InvoicePayment",
+                "Hubiko\\Paypal\\Providers\\RetainerPayment",
+                "Hubiko\\Paypal\\Providers\\CoursePayment",
+                "Hubiko\\Paypal\\Providers\\HotelRoomBookingPayment",
+                "Hubiko\\Paypal\\Providers\\propertyInvoicePayment",
+                "Hubiko\\Paypal\\Providers\\VehicleBookingPayment",
+                "Hubiko\\Paypal\\Providers\\MembershipPlanPayment",
+                "Hubiko\\Paypal\\Providers\\BeautySpaSerivceProvider",
+                "Hubiko\\Paypal\\Providers\\ParkingSerivceProvider",
+                "Hubiko\\Paypal\\Providers\\ContentPayment",
+                "Hubiko\\Paypal\\Providers\\MovieShowBookingServiceProvider",
+                "Hubiko\\Paypal\\Providers\\EventShowBookingServiceProvider",
+                "Hubiko\\Paypal\\Providers\\BookingsServiceProvider",
+                "Hubiko\\Paypal\\Providers\\FacilitiesSerivceProvider",
+                "Hubiko\\Paypal\\Providers\\VcardSerivceProvider",
+                "Hubiko\\Paypal\\Providers\\CoworkingPlanServiceProvider",
+                "Hubiko\\Paypal\\Providers\\CoworkingBookingServiceProvider",
+                "Hubiko\\Paypal\\Providers\\WaterParkServiceProvider",
+                "Hubiko\\Paypal\\Providers\\SportsAndClubBookingSerivceProvider",
+                "Hubiko\\Paypal\\Providers\\SportsAndClubMembershipPlanSerivceProvider",
+                "Hubiko\\Paypal\\Providers\\BoutiqueBookingServiceProvider",
+                "Hubiko\\Paypal\\Providers\\BankAccountPayments",
+                "Hubiko\\Paypal\\Providers\\BrandDepositServiceProvider",
+                "Hubiko\\Paypal\\Providers\\NGODonationPayment",
+                "Hubiko\\Paypal\\Providers\\ArtShowcasePaymentSerivceProvider"
+            ]
+        }
+    }
+}

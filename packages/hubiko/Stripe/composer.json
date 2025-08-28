@@ -1,0 +1,54 @@
+{
+    "name": "hubiko/stripe",
+    "description": "Self-built Stripe package for Hubiko",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "stripe/stripe-php": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hubiko\\Stripe\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubiko\\Stripe\\Providers\\StripeServiceProvider",
+                "Hubiko\\Stripe\\Providers\\ViewComposer",
+                "Hubiko\\Stripe\\Providers\\InvoicePayment",
+                "Hubiko\\Stripe\\Providers\\RetainerPayment",
+                "Hubiko\\Stripe\\Providers\\CoursePayment",
+                "Hubiko\\Stripe\\Providers\\HotelRoomBookingPayment",
+                "Hubiko\\Stripe\\Providers\\propertyInvoicePayment",
+                "Hubiko\\Stripe\\Providers\\VehicleBookingPayment",
+                "Hubiko\\Stripe\\Providers\\MembershipPlanPayment",
+                "Hubiko\\Stripe\\Providers\\BeautySpaSerivceProvider",
+                "Hubiko\\Stripe\\Providers\\ParkingSerivceProvider",
+                "Hubiko\\Stripe\\Providers\\ContentPayment",
+                "Hubiko\\Stripe\\Providers\\MovieShowBookingServiceProvider",
+                "Hubiko\\Stripe\\Providers\\EventShowBookingServiceProvider",
+                "Hubiko\\Stripe\\Providers\\BookingsServiceProvider",
+                "Hubiko\\Stripe\\Providers\\FacilitiesSerivceProvider",
+                "Hubiko\\Stripe\\Providers\\ChildFeePayment",
+                "Hubiko\\Stripe\\Providers\\VcardSerivceProvider",
+                "Hubiko\\Stripe\\Providers\\CoworkingPlanServiceProvider",
+                "Hubiko\\Stripe\\Providers\\CoworkingBookingServiceProvider",
+                "Hubiko\\Stripe\\Providers\\WaterParkServiceProvider",
+                "Hubiko\\Stripe\\Providers\\SportsAndClubBookingSerivceProvider",
+                "Hubiko\\Stripe\\Providers\\SportsAndClubMembershipPlanSerivceProvider",
+                "Hubiko\\Stripe\\Providers\\BoutiqueBookingServiceProvider",
+                "Hubiko\\Stripe\\Providers\\BankAccountPayments",
+                "Hubiko\\Stripe\\Providers\\BrandDepositServiceProvider",
+                "Hubiko\\Stripe\\Providers\\NGODonationPayment",
+                "Hubiko\\Stripe\\Providers\\ArtShowcasePaymentSerivceProvider"
+            ]
+        }
+    }
+}

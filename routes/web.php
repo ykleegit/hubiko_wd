@@ -18,6 +18,7 @@ use App\Http\Controllers\CustomDomainRequestController;
 use App\Http\Controllers\EmailTemplateController;
 use App\Http\Controllers\HelpdeskConversionController;
 use App\Http\Controllers\HelpdeskTicketCategoryController;
+use App\Http\Controllers\AddOnController;
 use App\Http\Controllers\HelpdeskTicketController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PurchaseController;
@@ -413,8 +414,18 @@ Route::get('purchases/pdf/{id}', [PurchaseController::class, 'purchase'])->name(
 //instgram & facebook webhook call
 Route::any('/meta/callback', [MetaController::class, 'handleWebhook'])->name('meta.callback')->withoutMiddleware([VerifyCsrfToken::class]);
 
+// Self-built Add-on Management Routes
+Route::middleware(['auth'])->prefix('addons')->name('addons.')->group(function () {
+    Route::get('/', [AddOnController::class, 'index'])->name('index');
+    Route::get('/{addon}', [AddOnController::class, 'show'])->name('show');
+    Route::post('/{addon}/install', [AddOnController::class, 'install'])->name('install');
+    Route::post('/{addon}/uninstall', [AddOnController::class, 'uninstall'])->name('uninstall');
+    Route::post('/{addon}/enable', [AddOnController::class, 'enable'])->name('enable');
+    Route::post('/{addon}/disable', [AddOnController::class, 'disable'])->name('disable');
+});
+
 Route::get('composer/json',function(){
-    $path = base_path('packages/workdo');
+    $path = base_path('packages/hubiko');
     $modules = \Illuminate\Support\Facades\File::directories($path);
 
     $moduleNames = array_map(function($dir) {
@@ -425,10 +436,10 @@ Route::get('composer/json',function(){
     $repo = '';
     foreach($moduleNames as $module){
         $packageName = preg_replace('/([a-z])([A-Z])/', '$1-$2', $module);
-        $require .= '"workdo/'.strtolower($packageName).'": "dev-testing",';
+        $require .= '"hubiko/'.strtolower($packageName).'": "dev-main",';
         $repo .= '{
             "type": "path",
-            "url": "packages/workdo/'.$module.'"
+            "url": "packages/hubiko/'.$module.'"
         },';
     }
     return $require . '<br><br><br>' . $repo;

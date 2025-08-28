@@ -1,0 +1,33 @@
+{
+    "name": "Account",
+    "alias": "Account Pro",
+    "description": "Complete financial management suite with advanced invoicing, recurring billing, professional templates, expense management, and payment receipts",
+    "priority": 20,
+    "version": 4,
+    "features": [
+        "Enhanced Quotes & Estimates System",
+        "Automated Recurring Billing",
+        "Professional Invoice Templates",
+        "Payment Receipts Generation",
+        "Advanced Expense Management",
+        "Expense Reports & Analytics",
+        "Multi-Payment Gateway Support",
+        "Financial Dashboard & Analytics"
+    ],
+    "pro_features": {
+        "recurring_billing": "Automated subscription invoicing with multiple frequencies",
+        "advanced_templates": "Professional invoice and quote templates with customization",
+        "payment_receipts": "Automated PDF receipt generation and management",
+        "expense_management": "Enhanced expense tracking with categories and attachments",
+        "expense_reports": "Comprehensive expense reporting and approval workflow",
+        "analytics": "Advanced financial analytics and business intelligence"
+    },
+    "child_module": [
+        "Goal",
+        "Plaid",
+        "BudgetPlanner"
+    ],
+    "package_name": "account",
+    "self_built": true,
+    "provider": "hubiko"
+}

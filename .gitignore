@@ -1,2 +1,5 @@
 # Ignore the REF directory
 /REF/
+
+# Ignore old workdo packages (migrated to hubiko)
+/packages/workdo/

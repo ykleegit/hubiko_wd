@@ -1,0 +1,26 @@
+{
+    "name": "hubiko/lead",
+    "description": "Self-built Lead package for Hubiko",
+    "type": "library",
+    "license": "MIT",
+    "require": [],
+    "autoload": {
+        "psr-4": {
+            "Hubiko\\Lead\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubiko\\Lead\\Providers\\LeadServiceProvider",
+                "Hubiko\\Lead\\Providers\\ViewComposer"
+            ]
+        }
+    }
+}

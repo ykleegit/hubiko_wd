@@ -114,7 +114,7 @@
         },
         "merge-plugin": {
             "include": [
-                "packages/workdo/*/composer.json"
+                "packages/hubiko/*/composer.json"
             ],
             "recurse": false,
             "replace": false,

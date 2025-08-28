@@ -1,0 +1,12 @@
+{
+    "name": "Paypal",
+    "alias": "PayPal",
+    "description": "Self-built Paypal module with enhanced features and local management",
+    "priority": 1510,
+    "version": 3.8,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "paypal",
+    "self_built": true,
+    "provider": "hubiko"
+}

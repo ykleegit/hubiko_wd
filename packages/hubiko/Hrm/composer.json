@@ -1,0 +1,26 @@
+{
+    "name": "hubiko/hrm",
+    "description": "Self-built Hrm package for Hubiko",
+    "type": "library",
+    "license": "MIT",
+    "require": [],
+    "autoload": {
+        "psr-4": {
+            "Hubiko\\Hrm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubiko\\Hrm\\Providers\\HrmServiceProvider",
+                "Hubiko\\Hrm\\Providers\\BranchFields"
+            ]
+        }
+    }
+}

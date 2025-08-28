@@ -6,4 +6,5 @@ return [
     App\Providers\EventServiceProvider::class,
     App\Providers\PackageServiceProvider::class,
     App\Providers\RouteServiceProvider::class,
+    App\Providers\AddOnServiceProvider::class,
 ];

@@ -1,0 +1,26 @@
+{
+    "name": "hubiko/pos",
+    "description": "Self-built Pos package for Hubiko",
+    "type": "library",
+    "license": "MIT",
+    "require": [],
+    "autoload": {
+        "psr-4": {
+            "Hubiko\\Pos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubiko\\Pos\\Providers\\PosServiceProvider",
+                "Hubiko\\Pos\\Providers\\VendorPurchase"
+            ]
+        }
+    }
+}

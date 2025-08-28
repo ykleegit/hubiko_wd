@@ -1,0 +1,12 @@
+{
+    "name": "Taskly",
+    "alias": "Project",
+    "description": "Self-built Taskly module with enhanced features and local management",
+    "priority": 10,
+    "version": 3.5,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "taskly",
+    "self_built": true,
+    "provider": "hubiko"
+}

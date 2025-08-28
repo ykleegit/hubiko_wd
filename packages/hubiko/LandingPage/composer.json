@@ -1,0 +1,27 @@
+{
+    "name": "hubiko/landingpage",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hubiko\\LandingPage\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": [],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubiko\\LandingPage\\Providers\\LandingPageServiceProvider",
+                "Hubiko\\LandingPage\\Providers\\ViewComposer"
+            ]
+        }
+    },
+    "description": "Self-built LandingPage package for Hubiko"
+}

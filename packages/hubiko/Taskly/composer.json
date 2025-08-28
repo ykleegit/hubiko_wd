@@ -1,0 +1,26 @@
+{
+    "name": "hubiko/taskly",
+    "description": "Self-built Taskly package for Hubiko",
+    "type": "library",
+    "license": "MIT",
+    "require": [],
+    "autoload": {
+        "psr-4": {
+            "Hubiko\\Taskly\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubiko\\Taskly\\Providers\\TasklyServiceProvider",
+                "Hubiko\\Taskly\\Providers\\ViewComposer"
+            ]
+        }
+    }
+}

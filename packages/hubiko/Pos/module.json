@@ -1,0 +1,12 @@
+{
+    "name": "Pos",
+    "alias": "POS",
+    "description": "Self-built Pos module with enhanced features and local management",
+    "priority": 50,
+    "version": 3.7,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "package_name": "pos",
+    "self_built": true,
+    "provider": "hubiko"
+}

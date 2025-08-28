@@ -1,0 +1,13 @@
+{
+    "name": "LandingPage",
+    "alias": "CMS",
+    "description": "Self-built LandingPage module with enhanced features and local management",
+    "priority": 0,
+    "version": 3.6,
+    "monthly_price": 0,
+    "yearly_price": 0,
+    "display": false,
+    "package_name": "landing-page",
+    "self_built": true,
+    "provider": "hubiko"
+}

@@ -1,0 +1,29 @@
+{
+    "name": "hubiko/account",
+    "description": "Self-built Account package for Hubiko",
+    "type": "library",
+    "license": "MIT",
+    "require": [],
+    "autoload": {
+        "psr-4": {
+            "Hubiko\\Account\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hubiko",
+            "email": "support@hubiko.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hubiko\\Account\\Providers\\AccountServiceProvider",
+                "Hubiko\\Account\\Providers\\InvoicePayment",
+                "Hubiko\\Account\\Providers\\RetainerPayment",
+                "Hubiko\\Account\\Providers\\ViewComposer",
+                "Hubiko\\Account\\Providers\\ProjectBillProvider"
+            ]
+        }
+    }
+}
