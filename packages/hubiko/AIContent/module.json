@@ -1,6 +1,12 @@
 {
+    "name": "AIContent",
+    "alias": "AI Content Generator",
+    "version": "1.0",
     "self_built": true,
     "provider": "hubiko",
+    "package_name": "AIContent",
+    "monthly_price": 0,
+    "yearly_price": 0,
     "description": "Self-built AIContent module with enhanced features and local management",
     "features": [
         "AI-Powered Content Generation",

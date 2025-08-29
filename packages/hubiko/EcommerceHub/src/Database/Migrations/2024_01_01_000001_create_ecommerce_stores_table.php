@@ -8,7 +8,8 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('ecommerce_stores', function (Blueprint $table) {
+        if (!Schema::hasTable('ecommerce_stores')) {
+            Schema::create('ecommerce_stores', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
@@ -34,7 +35,8 @@ return new class extends Migration
 
             $table->index(['workspace_id', 'is_active']);
             $table->index('slug');
-        });
+            });
+        }
     }
 
     public function down()

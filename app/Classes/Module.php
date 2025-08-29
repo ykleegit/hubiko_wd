@@ -52,7 +52,7 @@ class Module
                         $this->alias = $addonJson['alias'] ?? $name;
                         $this->monthly_price = $addonJson['monthly_price'] ?? 0;
                         $this->yearly_price = $addonJson['yearly_price'] ?? 0;
-                        $this->image = url('/packages/hubiko/' . $addonJson['name'] . '/favicon.png');
+                        $this->image = url('/packages/hubiko/' . ($addonJson['name'] ?? $name) . '/favicon.png');
                         $this->description = $addonJson['description'] ?? "";
                         $this->priority = $addonJson['priority'] ?? 10;
                         $this->child_module = $addonJson['child_module'] ?? [];

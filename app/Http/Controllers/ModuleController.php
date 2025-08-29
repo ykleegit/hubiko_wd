@@ -25,10 +25,27 @@ class ModuleController extends Controller
         if (Auth::user()->isAbleTo('module manage')) {
             try {
                 $modules = Module::allModules();
-                $category_wise_add_ons = json_decode(file_get_contents("https://dash-demo.hubiko.com/cronjob/dash-addon.json"), true);
+                
+                // Use a try-catch block for the external URL fetch
+                try {
+                    $category_wise_add_ons = json_decode(file_get_contents("https://dash-demo.hubiko.com/cronjob/dash-addon.json", false, stream_context_create(['http' => ['timeout' => 3]])), true);
+                } catch (\Exception $e) {
+                    // If the URL is not accessible, use an empty array
+                    $category_wise_add_ons = [];
+                }
+                
+                // Ensure $category_wise_add_ons is always an array
+                if (!is_array($category_wise_add_ons)) {
+                    $category_wise_add_ons = [];
+                }
 
                 $path = base_path('packages/hubiko');
-                $devPackagePath = \Illuminate\Support\Facades\File::directories($path);
+                $devPackagePath = [];
+                
+                // Check if directory exists before trying to access it
+                if (\Illuminate\Support\Facades\File::exists($path)) {
+                    $devPackagePath = \Illuminate\Support\Facades\File::directories($path);
+                }
 
                 $devPackageDirectories = array_map(function ($dir) {
                     return basename($dir);
@@ -44,12 +61,16 @@ class ModuleController extends Controller
                 $index = 0;
                 foreach($devPackages as $devPackage){
                     $moduleFilePath = "{$path}/{$devPackage}/module.json";
+                    
+                    if (file_exists($moduleFilePath)) {
+                        $devPackageFileContent = file_get_contents($moduleFilePath);
+                        $devPackageArr = json_decode($devPackageFileContent);
+                    } else {
+                        continue; // Skip this package if module.json doesn't exist
+                    }
 
-                    $devPackageFileContent = file_get_contents($moduleFilePath);
-                    $devPackageArr = json_decode($devPackageFileContent);
-
-                    $devModules[$index]['name'] = $devPackageArr->name;
-                    $devModules[$index]['alias'] = $devPackageArr->alias;
+                    $devModules[$index]['name'] = $devPackageArr->name ?? $devPackage;
+                    $devModules[$index]['alias'] = $devPackageArr->alias ?? $devPackage;
                     $devModules[$index]['monthly_price'] = $devPackageArr->monthly_price ?? 0;
                     $devModules[$index]['yearly_price'] = $devPackageArr->yearly_price ?? 0;
                     $devModules[$index]['image'] = url('/packages/hubiko/' . $devPackage . '/favicon.png');
@@ -111,11 +132,11 @@ class ModuleController extends Controller
 
 
                     $addon = new AddOn;
-                    $addon->module = $data['name'];
-                    $addon->name = $data['alias'];
+                    $addon->module = $data['name'] ?? $request->name;
+                    $addon->name = $data['alias'] ?? $request->name;
                     $addon->monthly_price = $data['monthly_price'] ?? 0;
                     $addon->yearly_price = $data['yearly_price'] ?? 0;
-                    $addon->package_name = $data['package_name'];
+                    $addon->package_name = $data['package_name'] ?? $request->name;
                     $addon->save();
                     Module::moduleCacheForget($request->name);
                 }

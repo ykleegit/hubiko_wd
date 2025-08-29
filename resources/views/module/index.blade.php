@@ -71,20 +71,16 @@
                     </div>
                     <div class="col-xxl-4 col-md-6 col-12">
                         <div class="add-on-banner-content text-center ">
-                            <a href="https://hubiko.com/product-category/dash-saas-add-ons/?utm_source=demo&utm_medium=dash&utm_campaign=btn" target="new" class="btn btn-light mb-md-3 mb-2">
-                                <img src="https://hubiko.com/wp-content/uploads/2023/03/favicon.jpg" alt="">
-                                <span>{{ __('Click Here') }}</span>
-                            </a>
                             <h2>{{ __('Self-Built Add-ons') }}</h2>
-                            <p>+{{ $totalAddOns }}<span>{{ __('Premium Add-on') }}</span></p>
+                            <p>{{ count($modules) }}<span>{{ __('Installed Add-ons') }}</span></p>
                         </div>
                     </div>
                     <div class="col-xxl-4 col-12">
                         <div class="add-on-btn d-flex flex-wrap align-items-center justify-content-xxl-end justify-content-center gap-2">
-                            <a class="btn btn-warning" href="https://hubiko.com/product-category/dash-saas-add-ons/dash-saas-bundle/?utm_source=demo&utm_medium=dash-bundle&utm_campaign=btn" target="new">
+                            <a class="btn btn-warning" href="#">
                                 {{ __('Manage Add-ons') }}
                               </a>
-                              <a class="btn btn-primary" href="https://hubiko.com/product-category/dash-saas-add-ons/?utm_source=demo&utm_medium=dash&utm_campaign=btn" target="new">
+                              <a class="btn btn-primary" href="#">
                                 {{ __('Self-Built Add-ons') }}
                               </a>
                         </div>
@@ -128,8 +124,7 @@
                                 <p class="text-muted text-sm mb-0">
                                     {{  $devModule['description'] ?? '' }}
                                 </p>
-                                <a href="{{ route('software.details', $devModule['alias']) }}" target="_new"
-                                    class="btn  btn-outline-secondary w-100 mt-2">{{ __('How To Register') }}</a>
+                                <a href="#" class="btn btn-outline-secondary w-100 mt-2">{{ __('How To Register') }}</a>
                             </div>
                         </div>
                     </div>
@@ -194,8 +189,7 @@
                                 <p class="text-muted text-sm mb-0">
                                     {{  $module->description ?? '' }}
                                 </p>
-                                <a href="{{ route('software.details', $module->alias) }}" target="_new"
-                                    class="btn  btn-outline-secondary w-100 mt-2">{{ __('View Details') }}</a>
+                                <a href="#" class="btn btn-outline-secondary w-100 mt-2">{{ __('View Details') }}</a>
                             </div>
                         </div>
                     </div>

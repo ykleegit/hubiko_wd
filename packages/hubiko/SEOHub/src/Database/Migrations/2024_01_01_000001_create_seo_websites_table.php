@@ -8,7 +8,8 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('seo_websites', function (Blueprint $table) {
+        if (!Schema::hasTable('seo_websites')) {
+            Schema::create('seo_websites', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('url');
@@ -29,7 +30,8 @@ return new class extends Migration
 
             $table->index(['workspace_id', 'is_active']);
             $table->index('domain');
-        });
+            });
+        }
     }
 
     public function down()

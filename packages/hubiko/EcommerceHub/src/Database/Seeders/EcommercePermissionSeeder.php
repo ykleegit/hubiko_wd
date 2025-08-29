@@ -55,17 +55,21 @@ class EcommercePermissionSeeder extends Seeder
         foreach ($permissions as $permission_name) {
             $permission = Permission::where('name', $permission_name)->first();
             if (!$permission) {
-                $permission = Permission::create(['name' => $permission_name]);
+                $permission = Permission::create([
+                    'name' => $permission_name,
+                    'display_name' => ucwords($permission_name),
+                    'description' => ucwords($permission_name)
+                ]);
             }
 
             // Assign to company role
-            if ($company_role && !$company_role->hasPermissionTo($permission)) {
-                $company_role->givePermissionTo($permission);
+            if ($company_role) {
+                $company_role->permissions()->syncWithoutDetaching([$permission->id]);
             }
 
             // Assign to super admin role
-            if ($super_admin_role && !$super_admin_role->hasPermissionTo($permission)) {
-                $super_admin_role->givePermissionTo($permission);
+            if ($super_admin_role) {
+                $super_admin_role->permissions()->syncWithoutDetaching([$permission->id]);
             }
         }
     }

@@ -14,7 +14,7 @@
     "active": 1,
     "order": 0,
     "providers": [
-        "Workdo\\SEOHub\\Providers\\SEOHubServiceProvider"
+        "Hubiko\\SEOHub\\Providers\\SEOHubServiceProvider"
     ],
     "aliases": [],
     "files": [],

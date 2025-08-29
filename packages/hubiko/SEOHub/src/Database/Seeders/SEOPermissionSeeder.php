@@ -4,7 +4,7 @@ namespace Hubiko\SEOHub\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Spatie\Permission\Models\Permission;
+use App\Models\Permission;
 
 class SEOPermissionSeeder extends Seeder
 {
@@ -68,7 +68,7 @@ class SEOPermissionSeeder extends Seeder
         ];
 
         foreach ($permissions as $permission) {
-            Permission::firstOrCreate(['name' => $permission]);
+            Permission::firstOrCreate(['name' => $permission, 'display_name' => ucwords($permission), 'description' => ucwords($permission)]);
         }
     }
 }
