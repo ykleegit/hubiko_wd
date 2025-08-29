@@ -3,3 +3,12 @@
 
 # Ignore old workdo packages (migrated to hubiko)
 /packages/workdo/
+
+# Ignore backup files and directories
+.env.backup.*
+*_pre_b2b2c.sql
+config_backup_*/
+uploads_backup_*/
+
+# Ignore MacOS files
+.DS_Store
